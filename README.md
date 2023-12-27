@@ -68,3 +68,24 @@ from https://stackoverflow.com/questions/16675766/get-the-difference-between-two
 git fetch origin master:master
 git merge master
 ```
+
+### Prevent local commits to master
+
+```shell
+touch git/hooks/pre-commit
+```
+
+```bash
+#!/bin/bash
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to master branch"
+  exit 1
+fi
+```
+
+```shell
+chmod +x .git/hooks/pre-commit
+```
+
+from https://stackoverflow.com/questions/40462111/prevent-commits-in-master-branch
