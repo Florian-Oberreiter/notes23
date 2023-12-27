@@ -33,6 +33,14 @@ entities.sort(Comparator.comparing(entity -> entity.getSubEntity().getAmount()))
 
 from https://stackoverflow.com/questions/48095224/java-8-sort-on-class-members-property
 
+### Stream collect to set perserving order
+
+```java
+.collect( Collectors.toCollection( LinkedHashSet::new ) );
+```
+
+from https://stackoverflow.com/questions/51944956/stream-to-linkedhashset
+
 ### Stream group by
 
 ```java
