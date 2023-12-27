@@ -32,3 +32,12 @@ entities.sort(Comparator.comparing(entity -> entity.getSubEntity().getAmount()))
 ```
 
 from https://stackoverflow.com/questions/48095224/java-8-sort-on-class-members-property
+
+### Stream group by
+
+```java
+Map<BlogPostType, List<BlogPost>> postsPerType = posts.stream()
+  .collect(groupingBy(BlogPost::getType));
+```
+
+from https://www.baeldung.com/java-groupingby-collector
