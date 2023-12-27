@@ -27,6 +27,12 @@ from https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-row
 
 https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5005.htm
 
+## Hibernate
+
+SQL logging
+
+https://stackoverflow.com/questions/1710476/how-to-print-a-query-string-with-parameter-values-when-using-hibernate
+
 ## Java
 
 ### Sort based on subproperty
