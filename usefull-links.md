@@ -25,3 +25,15 @@ https://github.com/Genymobile/scrcpy
 ## In browser notes (url param)
 
 https://temporarynote.com/en
+
+## Unit tests
+
+https://gist.github.com/gniemann/adaf12895c22eb5c11c0591f8cb5952c
+
+## Bounded Context
+
+https://martinfowler.com/bliki/BoundedContext.html
+
+## Application- vs DomainService
+
+https://enterprisecraftsmanship.com/posts/domain-vs-application-services/
