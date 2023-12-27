@@ -41,3 +41,15 @@ Map<BlogPostType, List<BlogPost>> postsPerType = posts.stream()
 ```
 
 from https://www.baeldung.com/java-groupingby-collector
+
+## GIT
+
+### Create patchfile branch diff
+
+```shell
+git diff master Branch1 > ../patchfile
+git checkout Branch2
+git apply ../patchfile
+```
+
+from https://stackoverflow.com/questions/16675766/get-the-difference-between-two-branches-in-git
