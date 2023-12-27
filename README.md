@@ -99,3 +99,13 @@ chmod +x .git/hooks/pre-commit
 ```
 
 from https://stackoverflow.com/questions/40462111/prevent-commits-in-master-branch
+
+## Linux
+
+### Free up space in boot
+
+```shell
+sudo apt-get autoremove
+```
+
+from https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot

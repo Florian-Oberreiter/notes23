@@ -9,3 +9,19 @@ https://observablehq.com/@d3/gallery?utm_source=d3js-org&utm_medium=nav&utm_camp
 ## Realtime communication between brwoser tabs
 
 https://blog.bitsrc.io/4-ways-to-communicate-across-browser-tabs-in-realtime-e4f5f6cbedca
+
+## SWR React hooks
+
+https://swr.vercel.app/
+
+## Add react to website
+
+https://legacy.reactjs.org/docs/add-react-to-a-website.html#step-2-add-the-script-tags
+
+### SCRCPY android device mirror
+
+https://github.com/Genymobile/scrcpy
+
+## In browser notes (url param)
+
+https://temporarynote.com/en
