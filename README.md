@@ -53,3 +53,10 @@ git apply ../patchfile
 ```
 
 from https://stackoverflow.com/questions/16675766/get-the-difference-between-two-branches-in-git
+
+### Fetch and merge master without branch switch
+
+```shell
+git fetch origin master:master
+git merge master
+```
