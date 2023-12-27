@@ -69,6 +69,16 @@ git fetch origin master:master
 git merge master
 ```
 
+### Squash merge
+
+```shell
+git checkout master
+git merge --squash bugfix
+git commit
+```
+
+from https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit
+
 ### Prevent local commits to master
 
 ```shell
