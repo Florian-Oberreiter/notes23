@@ -54,6 +54,14 @@ Map<BlogPostType, List<BlogPost>> postsPerType = posts.stream()
 
 from https://www.baeldung.com/java-groupingby-collector
 
+### Stream toMap
+
+```java
+books.stream().collect(Collectors.toMap(Book::getIsbn, Book::getName));
+```
+
+from https://www.baeldung.com/java-collectors-tomap
+
 ## GIT
 
 ### Create patchfile branch diff
