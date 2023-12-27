@@ -102,6 +102,18 @@ $ git commit -m "the commit message for all of them"
 
 from https://stackoverflow.com/questions/1463340/how-can-i-revert-multiple-git-commits
 
+### Reset to remote branch
+
+To save uncommited changes: git stash
+
+```shell
+git fetch --all
+git branch backup-master
+git reset --hard origin/master
+```
+
+from https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
+
 ### Prevent local commits to master
 
 ```shell
