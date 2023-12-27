@@ -79,6 +79,17 @@ git commit
 
 from https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit
 
+### Revert multiple commits
+
+```shell
+$ git revert --no-commit D
+$ git revert --no-commit C
+$ git revert --no-commit B
+$ git commit -m "the commit message for all of them"
+```
+
+from https://stackoverflow.com/questions/1463340/how-can-i-revert-multiple-git-commits
+
 ### Prevent local commits to master
 
 ```shell
