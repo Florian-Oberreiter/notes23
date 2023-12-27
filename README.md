@@ -23,6 +23,10 @@ FETCH FIRST 5 ROWS ONLY;
 
 from https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering
 
+### Database link
+
+https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5005.htm
+
 ## Java
 
 ### Sort based on subproperty
