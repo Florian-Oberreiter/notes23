@@ -68,6 +68,34 @@ books.stream().collect(Collectors.toMap(Book::getIsbn, Book::getName));
 
 from https://www.baeldung.com/java-collectors-tomap
 
+### Stream shared predicate state
+
+```java
+public IntPredicate sharedState() {
+    final List<Integer> l = new ArrayList<>();
+    return curr -> {
+        if (l.size() >= 3) {
+            return true;
+        }
+        l.add(curr);
+        return false;
+    };
+}
+
+@Test
+void streamWithSharedPredicate() {
+    var shared = sharedState();
+    var x = IntStream.range(0, 20)
+            .filter(shared)
+            .toArray();
+    System.out.println(x.length); // 17
+    x = IntStream.range(0, 20)
+            .filter(shared)
+            .toArray();
+    System.out.println(x.length); // 20
+}
+```
+
 ## GIT
 
 ### Create patchfile branch diff
