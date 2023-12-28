@@ -37,3 +37,7 @@ https://martinfowler.com/bliki/BoundedContext.html
 ## Application- vs DomainService
 
 https://enterprisecraftsmanship.com/posts/domain-vs-application-services/
+
+## KVM Desktop keyboard/mouse switch
+
+https://news.ycombinator.com/item?id=38780519
