@@ -178,3 +178,10 @@ sudo apt-get autoremove
 ```
 
 from https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot
+
+### Start simple python3 webserver
+
+```shell
+cd /path/to/web-data
+python3 -m http.server
+```
