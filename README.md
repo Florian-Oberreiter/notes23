@@ -12,6 +12,12 @@ from https://stackoverflow.com/questions/2684630/making-a-mocked-method-return-a
 
 ## Oracle SQL
 
+### Remove not null constraint
+
+```SQL
+alter table MYTABLE modify (MYCOLUMN null);
+```
+
 ### limit results
 
 ```SQL
@@ -181,7 +187,8 @@ from https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot
 
 ### Start simple python3 webserver
 
-```shell
+````shell
 cd /path/to/web-data
 python3 -m http.server
-```
+```new
+````
