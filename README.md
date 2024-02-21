@@ -102,6 +102,16 @@ void streamWithSharedPredicate() {
 }
 ```
 
+### Maven skip tests
+
+```shell
+# skips compilation and execution
+mvn clean package -Dmaven.test.skip=true
+
+# skips execution
+mvn clean package -DskipTests=true
+```
+
 ## GIT
 
 ### Create patchfile branch diff
