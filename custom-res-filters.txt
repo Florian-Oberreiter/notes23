@@ -1,0 +1,13 @@
+! 2 Sept 2024 https://www.twitch.tv
+www.twitch.tv##.chat-room__content > :nth-child(1):style(visibility: hidden !important; overflow: hidden !important;)
+www.twitch.tv##.chat-room__content > :nth-child(2):style(visibility: hidden !important; overflow: hidden !important;)
+
+
+! 2023-11-01 https://news.ycombinator.com
+  ! Invert the colours of the site, making a dark mode that I like
+  ! `invert(95%)` does most of the work,
+  ! but you can tweak the hue-rotate value to fine tune the colours
+  news.ycombinator.com##body:style(filter:invert(95%) hue-rotate(200deg); background: white)
+  news.ycombinator.com##html:style(background: #13150e)
+! Limit comments to 70 characters wide, making them easier to read
+news.ycombinator.com##.comment:style(max-width: 70ch !important; overflow: hidden !important;)
