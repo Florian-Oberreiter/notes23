@@ -45,3 +45,7 @@ https://news.ycombinator.com/item?id=38780519
 ## Spring cachable
 
 https://rcarrillo.dev/request-scoped-caching-with-spring/
+
+## Self hosted git
+https://news.ycombinator.com/item?id=42753523
+https://forgejo.org/
