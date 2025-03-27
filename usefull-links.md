@@ -49,3 +49,6 @@ https://rcarrillo.dev/request-scoped-caching-with-spring/
 ## Self hosted git
 https://news.ycombinator.com/item?id=42753523
 https://forgejo.org/
+
+## Make file effect
+https://blog.yossarian.net/2025/01/10/Be-aware-of-the-Makefile-effect

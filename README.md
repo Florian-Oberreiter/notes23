@@ -202,3 +202,9 @@ cd /path/to/web-data
 python3 -m http.server
 ```new
 ````
+
+### Use sudo to set permissions for current user
+
+ ```shell
+ sudo chown -R $USER:$USER /var/www/domain_name/html 
+```
