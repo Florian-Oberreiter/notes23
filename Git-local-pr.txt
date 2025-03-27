@@ -1,0 +1,6 @@
+git apply < <(git diff master..task/PORT-16700-stammdaten-imports-tabelle-m)
+
+git apply < <(git diff develop/v1.8.0..task/PORT-16700-stammdaten-imports-tabelle-on-v1.8.0)
+
+git apply < <(git diff mergeabc1..mergeabc2)
+

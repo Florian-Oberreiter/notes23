@@ -33,6 +33,19 @@ from https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-row
 
 https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5005.htm
 
+### Like
+
+```SQL
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+```
+
+### Date
+
+```SQL
+where birthday = date '2012-04-27'
+```
+
 ## Hibernate
 
 SQL logging

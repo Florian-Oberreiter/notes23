@@ -1,0 +1,12 @@
+- Spring batch no good
+- Retro board direkt bei Sprint begin
+- Selbe Stammdaten für ALLE tests
+- Bessere error logs für int tests
+- Sonar issue fixes / refactorings PRE branching for releases
+- web builds to slow to many builds and not enough agents -> queue becomes VERY long
+- daily termin aus dem kalender für sprintwechsel tag
+
+https://answers.microsoft.com/en-us/windows/forum/all/how-to-disable-shutdown-option-only/24262dd3-122d-4213-9711-84968fa1a25e
+
+- TCM wird begonnen aber nicht fertig, nichts wird fertig
+- 243 Julius anzeige, BE storno

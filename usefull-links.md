@@ -45,3 +45,22 @@ https://news.ycombinator.com/item?id=38780519
 ## Spring cachable
 
 https://rcarrillo.dev/request-scoped-caching-with-spring/
+
+## Spring cron
+
+https://codepen.io/etienne582/pen/xxOgwzX
+https://stackoverflow.com/questions/48114936/what-is-the-expected-behaviour-of-spring-scheduled-cron-when-jobs-would-overlap
+
+## Postman SOAP
+
+https://www.baeldung.com/postman-soap-request
+
+## Endless scroll without pagination
+
+https://use-the-index-luke.com/no-offset
+https://old.reddit.com/r/programming/comments/1gv1mqy/offset_considered_harmful_or_the_surprising/
+https://cedardb.com/blog/pagination/
+
+## Cheat Sheets
+
+https://dev.to/devmount/a-cheatsheet-of-128-cheatsheets-for-developers-f4m?ref=dailydev

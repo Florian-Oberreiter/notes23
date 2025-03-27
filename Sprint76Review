@@ -1,0 +1,129 @@
+- Traktionär von bis
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Modelmapper: begin / end bsc mapping
+- Stammdaten mocking in unit tests
+- fehlende Bsp in Storries
+- Unklar welche Daten wo vorhanden sind, bzw wo sie nachgeladen werden müssen. Noch problematischer wenn wir mit unrealistischen Testdaten arbeiten
+
+
+
+1) WZ und TFZ logisch löschen
+2) EntferneZugfahrtenImpl (Voll) + Lite
+3) logisch löschen Version mit SQL Restiction
+
+
+
+
+
+
+
+
+
+dp:
+1920x1080 (0x74) 148.500MHz +HSync +VSync *current +preferred
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  67.50KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  60.00Hz
+
+
+vga:
+1920x1080_60.00 (0x7e5) 172.800MHz -HSync +VSync *current
+    h: width  1920 start 2040 end 2248 total 2576 skew    0 clock  67.08KHz
+    v: height 1080 start 1081 end 1084 total 1118           clock  60.00Hz
+
+
+gtf 
+# 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz
+  Modeline "1920x1080_60.00"  172.80  1920 2040 2248 2576  1080 1081 1084 1118  -HSync +Vsync
+
+
+  selfmade:
+"1920x1080_60.00_from_other_benq"  148.50  1920 2008 2052 2200  1080 1084 1089 1125  +HSync +Vsync
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doNothing(List<D> zugfahrten) {
+        System.out.println("noop");
+    }
+
+    public void deleteAll2(List<D> zugfahrten) {
+        List<UUID> zugfahrtIds = zugfahrten.stream().map(a -> a.getId()).toList();
+        List<ZugzusammensetzungEntity> zzgs = zugfahrtIds.stream().map(zugzusammensetzungJpaRepository::findAllByZugfahrtId)
+                .flatMap(a -> a.stream())
+                .toList();
+        List<UUID> zzgIds = zzgs.stream().map(a -> a.getId()).toList();
+
+        List<ZugzusammensetzungVersionEntity> versions = zzgIds.stream()
+                .map(zugzusammensetzungVersionJpaRepository::findAllByZugzusammensetzungId)
+                .flatMap(a -> a.stream())
+                .toList();
+
+        List<WagenZuweisungEntity> wagen = versions.stream()
+                .map(a -> a.getId()).map(wagenZuweisungJpaRepository::findAllByZugzusammensetzungVersionId)
+                .flatMap(a -> a.stream())
+                .toList();
+
+        List<TfzZuweisungEntity> tfz = versions.stream()
+                .map(a -> a.getId()).map(tfzZuweisungJpaRepository::findAllByZugzusammensetzungVersionId)
+                .flatMap(a -> a.stream())
+                .toList();
+
+        tfzZuweisungJpaRepository.deleteAll(tfz);
+        wagenZuweisungJpaRepository.deleteAll(wagen);
+
+        //        zugzusammensetzungJpaRepository.deleteAll(zzgs);
+        zugzusammensetzungJpaRepository.deleteAllById(zzgIds);
+        zugzusammensetzungVersionJpaRepository.deleteAll(versions);
+        zugfahrtJpaRepository.deleteAll(zugfahrten.stream()
+                .map(zugfahrtEntityMapper::mapToEntity)
+                .toList());
+    }
